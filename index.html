@@ -3,12 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet" />
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
     <title>Frontend Mentor | NFT preview card component</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body>
-    Equilibrium #3429 Our Equilibrium collection promotes balance and calm. 0.041 ETH 3 days left Creation of Jules Wyvern
+  <body class="flex jc-center al-center">
+    <article class="nft-card">
+      <figure class="nft-card-img" role="img" aria-label="NFT img"></figure>
+
+      <div class="nft-card-details">
+        <h1 class="heading-primary">Equilibrium #3429</h1>
+        <p class="nft-card-description">Our Equilibrium collection promotes balance and calm.</p>
+
+        <div class="nft-card-about flex jc-between">
+          <div class="ethereum-info flex al-center">
+            <img src="/images/icon-ethereum.svg" alt="" />
+            <span class="nft-pricing">0.041 ETH</span>
+          </div>
+
+          <div class="ethereum-time-info flex al-center">
+            <img src="/images/icon-clock.svg" alt="" />
+            <span class="nft-days-left">3 days left</span>
+          </div>
+        </div>
+
+        <div class="nft-author-info">
+          <figure class="nft-author-img-container flex al-center">
+            <img class="nft-author-img" src="/images/image-avatar.png" alt="NFT author" />
+            <figcaption class="nft-author-who"><span class="nft-creation-of">Creation of</span> Jules Wyvern</figcaption>
+          </figure>
+        </div>
+      </div>
+    </article>
 
     <!-- <div class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Hassan</a>.</div> -->
   </body>

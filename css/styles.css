@@ -1,0 +1,227 @@
+/*
+
+Design settings:
+
+--- 01 TYPOGRAPHY SYSTEM (px)
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Line heights: 1, 1.5
+Default:
+Small:
+Medium:
+Paragraph default:
+
+- Letter spacing: 0.5px
+Heading letter spacing:
+Subheading letter spacing:
+
+--- 02 COLORS
+(Primary with tints, shades and accent colors)
+
+- Primary:
+- Tints:
+- Shades:
+- Accents:
+- Greys:
+  - dark:
+  - medium:
+  - light:
+- White: hsl(0, 0%, 100%)
+
+--- 03 IMAGES
+- No system
+
+--- 04 ICONS
+- source:
+
+--- 05 SHADOWS
+- No system
+
+--- 06 BORDER RADIUS:
+- 11px
+- 20px
+
+--- 07 WHITESPACE
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* 10 / 16px */
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  max-width: 144rem;
+  margin: 0 auto;
+  background-color: hsl(217, 54%, 11%);
+  font-family: "Outfit", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 1;
+}
+
+/* ******************************** */
+/* LAYOUT STYLES */
+/* ******************************** */
+
+.nft-card {
+  width: 40rem;
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 20px;
+}
+
+.nft-card-img {
+  width: 35rem;
+  height: 35rem;
+  margin: 2.4rem auto 3.2rem auto;
+  background-image: url(/images/image-equilibrium.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 11px;
+}
+
+.nft-card-details {
+  margin: 0 3.2rem 2.4rem 3.2rem;
+}
+
+.nft-card-about {
+  margin-bottom: 2.4rem;
+}
+
+.nft-author-img-container {
+  gap: 1.6rem;
+}
+
+.nft-author-img {
+  width: 4.8rem;
+  height: 4.8rem;
+  border: 2px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+}
+
+.nft-author-info {
+  padding-top: 1.6rem;
+  border-top: 1px solid hsl(215, 32%, 27%);
+}
+
+.ethereum-info,
+.ethereum-time-info {
+  gap: 0.8rem;
+}
+
+.ethereum-time-info {
+  flex-basis: 12rem;
+}
+
+/* ******************************** */
+/* TYPOGRAPHY STYLES */
+/* ******************************** */
+
+.heading-primary {
+  margin-bottom: 1.6rem;
+  color: hsl(0, 0%, 100%);
+  font-size: 3rem;
+}
+
+.nft-card-description {
+  margin-bottom: 2.4rem;
+  color: hsl(215, 51%, 70%);
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.nft-pricing {
+  color: hsl(178, 100%, 50%);
+  font-weight: 600;
+}
+
+.nft-days-left,
+.nft-creation-of {
+  color: hsl(215, 51%, 70%);
+}
+
+.nft-author-who {
+  color: hsl(0, 0%, 100%);
+  font-weight: 300;
+}
+
+/* ******************************** */
+/* UTILITIES STYLES */
+/* ******************************** */
+
+.flex {
+  display: flex !important;
+}
+
+.jc-center {
+  justify-content: center !important;
+}
+
+.jc-between {
+  justify-content: space-between !important;
+}
+
+.al-center {
+  align-items: center !important;
+}
+
+/* ******************************** */
+/* Media Queries */
+/* ******************************** */
+
+/* 460px breakpoint */
+@media all and (max-width: 28.75em) {
+  html {
+    /* 8 / 16px */
+    font-size: 50%;
+  }
+
+  .ethereum-time-info {
+    flex-basis: 14rem;
+  }
+
+  .heading-primary {
+    font-size: 3.6rem;
+  }
+
+  .nft-card-description {
+    font-size: 2.4rem;
+  }
+
+  .nft-pricing,
+  .nft-days-left,
+  .nft-author-who {
+    font-size: 2rem;
+  }
+}
+
+/* 360px breakpoint */
+@media all and (max-width: 22.5em) {
+  html {
+    /* 6.7 / 16px */
+    font-size: 41.875%;
+  }
+
+  body {
+    padding: 2.4rem;
+  }
+}
