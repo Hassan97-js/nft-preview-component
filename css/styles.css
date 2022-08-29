@@ -63,7 +63,8 @@ html {
 }
 
 html,
-body {
+body,
+.main-content {
   height: 100%;
 }
 
